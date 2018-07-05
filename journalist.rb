@@ -56,8 +56,9 @@ end
 puts "#{a} handle contiennent des _"
 end
 
-
-
+def methode6
+puts @journalists.sort_by { |word| word.downcase }
+end
 
 def perfom
 combien
@@ -66,6 +67,7 @@ methode2
 methode3
 methode4
 methode5
+methode6
 end
 
 perfom
