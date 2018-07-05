@@ -50,21 +50,23 @@ end
 
 def hash6000(x)
 	hash = {}
-		x.each do |key, value|
-			if value < 6000
-				hash[key] = value
-			end
+	x.each do |key, value|
+		if value < 6000
+			hash[key] = value
 		end
+	end
 	return hash
 end
 
 def perform
 	mon_hash(@money, @value)
-	puts big_value(gets_f_values(@crypto_values))
-	puts min_value(gets_f_values(@crypto_values))
+	puts "La crypto qui a la plus grosse valeur est " + big_value(gets_f_values(@crypto_values))
+	puts "La crypto qui a la plus petite valeur est " + min_value(gets_f_values(@crypto_values))
 	puts "Il y en a #{methode2} qui contiennent le mot 'coin'."
+	puts "La crypto la plus haute parmis celles inférieure à 6000 est : " + big_value(hash6000(gets_f_values(@crypto_values)))
 	saut
 	puts hash6000(gets_f_values(@crypto_values))
 end
+
 perform
 
