@@ -17,7 +17,6 @@ end
 
 def methode2
 a = 0
-
 @journalists.each do |variable|
 	x = (variable.include?("aude") or variable.include?("Aude"))
 	if x
@@ -29,7 +28,6 @@ end
 
 def methode3
 a = 0
-
 @journalists.each do |variable|
 	if variable[1] == variable[1].upcase
 	a += 1
@@ -38,11 +36,36 @@ end
 puts "Il y en a #{a} qui commencent par une majuscule."
 end
 
+def methode4
+a = 0
+@journalists.each do |variable|
+	if variable =~ /[A-Z]/
+	a += 1
+	end
+end
+puts "#{a} handle contiennent des majuscules"
+end
+
+def methode5
+a = 0
+@journalists.each do |variable|
+	if (variable.include? ('_'))
+	a += 1
+	end
+end
+puts "#{a} handle contiennent des _"
+end
+
+
+
+
 def perfom
 combien
 methode
 methode2
 methode3
+methode4
+methode5
 end
 
 perfom
