@@ -30,10 +30,23 @@ def min_value(hash)
 	hash.key(hash.values.min)
 end
 
+def methode2
+a = 0
+@money.each do |variable|
+	variable = variable.downcase
+	x = variable.include?("coin")
+	if x
+	a += 1
+	end
+end
+puts "Il y en a #{a} qui contiennent le mot 'coin'."
+end
+
 def perform
 	mon_hash(@money, @value)
 	puts big_value(gets_f_values(@crypto_values))
 	puts min_value(gets_f_values(@crypto_values))
+	methode2
 end
 perform
 

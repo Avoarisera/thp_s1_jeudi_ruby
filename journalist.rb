@@ -43,7 +43,7 @@ a = 0
 	a += 1
 	end
 end
-puts "Il y en a #{a} qui contiennent des majuscules"
+puts "Il y en a #{a} qui contiennent des majuscules."
 end
 
 def methode5
@@ -53,7 +53,7 @@ a = 0
 	a += 1
 	end
 end
-puts "Il y en a #{a} qui contiennent des _"
+puts "Il y en a #{a} qui contiennent des _."
 end
 
 def methode6
