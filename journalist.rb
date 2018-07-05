@@ -4,3 +4,20 @@ def combien
 puts "Il y a #{@journalists.count} journalistes dans cet array."
 end
 
+def methode
+a = 0
+@journalists.each do |variable|
+	x = (variable.include?("9") or variable.include?("8") or variable.include?("7") or variable.include?("6") or variable.include?("5") or variable.include?("4") or variable.include?("3") or variable.include?("2") or variable.include?("1") or variable.include?("0"))
+	if x
+	a += 1
+	end
+end
+puts "#{a} handle contiennent un numéro."
+end
+
+def perfom
+combien
+methode
+end
+
+perfom
