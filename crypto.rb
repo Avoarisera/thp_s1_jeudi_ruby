@@ -12,5 +12,28 @@ def mon_hash(x, y)
 		return hash
 	end
 @crypto_values = mon_hash(@money, @value)
-puts @crypto_values
+
+
+def gets_f_values(x)
+	hash = {}
+	x.each do |key,value|
+		hash[key] = value.delete_prefix("$").to_f
+	end
+	return hash
+end
+
+def big_value(hash)
+	hash.key(hash.values.max)
+end
+
+def min_value(hash)
+	hash.key(hash.values.min)
+end
+
+def perform
+	mon_hash(@money, @value)
+	puts big_value(gets_f_values(@crypto_values))
+	puts min_value(gets_f_values(@crypto_values))
+end
+perform
 
