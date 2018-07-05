@@ -15,9 +15,22 @@ end
 puts "#{a} handle contiennent un numéro."
 end
 
+def methode2
+a = 0
+
+@journalists.each do |variable|
+	x = (variable.include?("aude") or variable.include?("Aude"))
+	if x
+	a += 1
+	end
+end
+puts "#{a} contiennent le prénom Aude."
+end
+
 def perfom
 combien
 methode
+methode2
 end
 
 perfom
