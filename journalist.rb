@@ -12,7 +12,7 @@ a = 0
 	a += 1
 	end
 end
-puts "#{a} handle contiennent un numéro."
+puts "Il y a #{a} handles qui contiennent un numéro."
 end
 
 def methode2
@@ -24,13 +24,25 @@ a = 0
 	a += 1
 	end
 end
-puts "#{a} contiennent le prénom Aude."
+puts "Il y en a #{a} qui contiennent le prénom Aude."
+end
+
+def methode3
+a = 0
+
+@journalists.each do |variable|
+	if variable[1] == variable[1].upcase
+	a += 1
+	end
+end
+puts "Il y en a #{a} qui commencent par une majuscule."
 end
 
 def perfom
 combien
 methode
 methode2
+methode3
 end
 
 perfom
