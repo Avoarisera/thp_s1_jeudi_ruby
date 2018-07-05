@@ -13,3 +13,4 @@ def mon_hash(x, y)
 	end
 @crypto_values = mon_hash(@money, @value)
 puts @crypto_values
+

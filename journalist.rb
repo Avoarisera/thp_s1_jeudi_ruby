@@ -43,7 +43,7 @@ a = 0
 	a += 1
 	end
 end
-puts "#{a} handle contiennent des majuscules"
+puts "Il y en a #{a} qui contiennent des majuscules"
 end
 
 def methode5
@@ -53,11 +53,14 @@ a = 0
 	a += 1
 	end
 end
-puts "#{a} handle contiennent des _"
+puts "Il y en a #{a} qui contiennent des _"
 end
 
 def methode6
-puts @journalists.sort_by { |word| word.downcase }
+	puts "Pour voir les handle rangés par ordre alphabétique, appuies sur une touche :"
+	print "->"
+	x = gets
+	puts @journalists.sort_by { |word| word.downcase }
 end
 
 def perfom
