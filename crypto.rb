@@ -39,14 +39,32 @@ a = 0
 	a += 1
 	end
 end
-puts "Il y en a #{a} qui contiennent le mot 'coin'."
+return a
+end
+
+def saut
+	puts "Si tu veux voir les cryptos dont la valeur est inférieure à 6000, appuies sur une touche :"
+	print "->"
+	x = gets
+end
+
+def hash6000(x)
+	hash = {}
+		x.each do |key, value|
+			if value < 6000
+				hash[key] = value
+			end
+		end
+	return hash
 end
 
 def perform
 	mon_hash(@money, @value)
 	puts big_value(gets_f_values(@crypto_values))
 	puts min_value(gets_f_values(@crypto_values))
-	methode2
+	puts "Il y en a #{methode2} qui contiennent le mot 'coin'."
+	saut
+	puts hash6000(gets_f_values(@crypto_values))
 end
 perform
 
